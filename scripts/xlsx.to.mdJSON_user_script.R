@@ -29,7 +29,7 @@ browseURL("https://guide.mdeditor.org/")
 #### Before you begin ####
 
 ## Complete the xlsx dictionary template
-browseURL("https://github.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/blob/main/docs/Dictionary_template.xlsx?raw=true")
+browseURL("https://github.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/blob/main/docs/xlsx.to.mdJSON_Dictionary_Template.xlsx?raw=true")
 
 ## Verify the following:
 ### 1) "datatype", "domainItem_name", "domainItem_value", and "definition" are completed for all rows
