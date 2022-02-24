@@ -39,8 +39,6 @@ browseURL("https://github.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/blob/main
 #### EDIT: Indicate your file info here ####
 
 # Set your working directory (where your xlsx dictionary is located)
-## Session -> Set Working Directory -> Choose Directory
-setwd("~/R-xlsx-to-mdJSON-dictionary/inputs")
 
 # Specify the name of your xlsx dictionary file
 input_file<-"Example_Dictionary.xlsx"
@@ -53,6 +51,8 @@ title<- "Example"
 
 
 #### DO NOT EDIT: Create your mdJSON dictionary ####
+
+setwd("~/R-xlsx-to-mdJSON-dictionary")
 
 # Load required packages
 source("https://raw.githubusercontent.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/main/scripts/xlsx.to.mdJSON_packages.R")
