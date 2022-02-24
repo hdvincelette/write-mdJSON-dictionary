@@ -4,6 +4,7 @@
 
 xlsx.to.mdJSON <- function(input_file,output_file,title) {
   
+  
   # Import dictionary and blank json file
   xlsx.dictionary<-read_excel(paste0("inputs/",input_file))
   blankjson = rjson::fromJSON(file= "inputs/Blank_Dictionary.json")
@@ -243,7 +244,6 @@ xlsx.to.mdJSON <- function(input_file,output_file,title) {
   newjson= rjson::toJSON(blankjson)
   write(newjson, paste0("outputs/",output_file))
   
-  options(warn=-1)
   
 }
 
