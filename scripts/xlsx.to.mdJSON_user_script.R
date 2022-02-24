@@ -29,30 +29,30 @@ browseURL("https://guide.mdeditor.org/")
 #### BEFORE YOU BEGIN ####
 
 ## Complete the xlsx dictionary template
-browseURL("https://github.com/hdvince/R-xlsx-to-mdJSON-dictionary/blob/main/Dictionary_template.xlsx?raw=true")
+browseURL("https://github.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/blob/main/docs/Dictionary_template.xlsx?raw=true")
 
 ## Verify the following:
 ### 1) "datatype", "domainItem_name", "domainItem_value", and "definition" are completed for all rows
 ### 2) "domainId" is "yes" for every column name row with defined permissible values
 
 
-#### Indicate your file info here ####
+#### EDIT: Indicate your file info here ####
 
 # Set your working directory (where your xlsx dictionary is located)
 ## Session -> Set Working Directory -> Choose Directory
-setwd("C:/Users/hvincelette/OneDrive - DOI/Data_management/mdEditor/R-xlsx-to-mdJSON-dictionary")
+setwd("~/R-xlsx-to-mdJSON-dictionary")
 
 # Specify the name of your xlsx dictionary file
-input_file<-"Example_Dictionary.xlsx"
+input_file<-"inputs/Example_Dictionary.xlsx"
 
 # Specify the desired name of your mdJSON dictionary file
-output_file<-"test_Dictionary.json"
+output_file<-"outputs/Example_Dictionary.json"
 
 # Specify the desired name of your dictionary in mdEditor
-title<- "test"
+title<- "Example"
 
 
-#### Create your mdJSON dictionary ####
+#### DO NOT EDIT: Create your mdJSON dictionary ####
 
 # Load required packages
 source("https://raw.githubusercontent.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/main/scripts/xlsx.to.mdJSON_packages.R")
