@@ -3,6 +3,7 @@
 # Package names
 packages <- c(
   "dplyr",
+  "stringr",
   "rjson",
   "jsonlite",
   "RJSONIO",
