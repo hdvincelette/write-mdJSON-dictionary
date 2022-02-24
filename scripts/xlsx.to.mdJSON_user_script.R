@@ -41,7 +41,7 @@ browseURL("https://github.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/blob/main
 
 # Set your working directory
 ## Session -> Set Working Directory -> To Project Directory
-setwd("C:/Users/hvincelette/OneDrive - DOI/Data_management/mdEditor/R-xlsx-to-mdJSON-dictionary")
+setwd(getwd())
 
 # Specify the name of your xlsx dictionary file
 input_file<-"Example_Dictionary.xlsx"
