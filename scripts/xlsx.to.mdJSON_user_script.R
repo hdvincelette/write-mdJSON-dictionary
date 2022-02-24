@@ -35,10 +35,9 @@ browseURL("https://github.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/blob/main
 ### 1) "datatype", "domainItem_name", "domainItem_value", and "definition" are completed for all rows
 ### 2) "domainId" is "yes" for every column name row with defined permissible values
 
+# IMPORTANT: Save your xlsx dictionary to the inputs folder
 
 #### EDIT: Indicate your file info here ####
-
-# Set your working directory (where your xlsx dictionary is located)
 
 # Specify the name of your xlsx dictionary file
 input_file<-"Example_Dictionary.xlsx"
@@ -55,11 +54,11 @@ title<- "Example"
 setwd("~/R-xlsx-to-mdJSON-dictionary")
 
 # Load required packages
-source("https://raw.githubusercontent.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/main/scripts/xlsx.to.mdJSON_packages.R")
+source("scripts/xlsx.to.mdJSON_packages.R")
 
 
 # Load the function
-source("https://raw.githubusercontent.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/main/scripts/xlsx.to.mdJSON_function.R")
+source("scripts/xlsx.to.mdJSON_function.R")
 
 
 # Run the function
@@ -68,8 +67,7 @@ xlsx.to.mdJSON(input_file,output_file,title)
 
 #### NEXT STEPS ####
 
-# The function you ran saved your mdJSON dictionary file in your working 
-# directory (the same location as your xlsx dictionary)
+# You can find your mdJSON dictionary file in the outputs folder 
 
 # Import your mdJSON dictionary to mdEditor
 ## Navigate to the mdEditor import tab

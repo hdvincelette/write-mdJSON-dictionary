@@ -243,6 +243,8 @@ xlsx.to.mdJSON <- function(input_file,output_file,title) {
   newjson= rjson::toJSON(blankjson)
   write(newjson, paste0("outputs/",output_file))
   
+  options(warn=-1)
+  
 }
 
 
