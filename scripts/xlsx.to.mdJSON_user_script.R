@@ -36,7 +36,7 @@ browseURL("https://github.com/hdvince/R-xlsx-to-mdJSON-dictionary/blob/main/Dict
 ### 2) "domainId" is "yes" for every column name row with defined permissible values
 
 
-#### PUT YOUR FILE INFO HERE ####
+#### Indicate your file info here ####
 
 # Set your working directory (where your xlsx dictionary is located)
 ## Session -> Set Working Directory -> Choose Directory
@@ -52,15 +52,14 @@ output_file<-"test_Dictionary.json"
 title<- "test"
 
 
-#### CREATE YOUR NEW DICTIONARY ####
+#### Create your mdJSON dictionary ####
 
 # Load required packages
-source("https://raw.githubusercontent.com/hdvince/R-xlsx-to-mdJSON-dictionary/main/")
-source("~/xlsx-to-mdJSON-dictionary/scripts/xlsx.to.mdJSON_packages.R")
+source("https://raw.githubusercontent.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/main/scripts/xlsx.to.mdJSON_packages.R")
 
 
 # Load the function
-source("~/xlsx-to-mdJSON-dictionary/scripts/xlsx.to.mdJSON_function.R")
+source("https://raw.githubusercontent.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/main/scripts/xlsx.to.mdJSON_function.R")
 
 
 # Run the function
