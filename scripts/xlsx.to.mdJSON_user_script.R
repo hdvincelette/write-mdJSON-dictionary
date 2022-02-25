@@ -18,7 +18,7 @@
 # is meant to initiate mdEditor dictionary records, not update them, which 
 # should be done manually in the mdEditor web application. It is recommended 
 # users maintain the xlsx dictionary as a human-readable reference for the 
-# associated data product.
+# associated data product(s).
 
 # Users should become familiar with mdEditor before using this script. 
 browseURL("https://go.mdeditor.org/#/dashboard")
