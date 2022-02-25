@@ -1,6 +1,6 @@
 
 
-# R-xlsx-to-mdJSON-dictionary (Version 1)
+# xlsx-to-mdJSON-dictionary (Version 1)
 # R script that writes an mdEditor mdJSON data dictionary using an xlsx template
 # Created by Hannah Vincelette
 # Updated 2/24/2022
@@ -41,6 +41,7 @@ browseURL("https://github.com/hdvincelette/R-xlsx-to-mdJSON-dictionary/blob/main
 
 # Set your working directory
 ## Session -> Set Working Directory -> To Project Directory
+## Your directory should end with "/xlsx-to-mdJSON-dictionary"
 setwd(getwd())
 
 # Specify the name of your xlsx dictionary file
