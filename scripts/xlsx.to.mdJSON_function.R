@@ -4,7 +4,6 @@
 
 xlsx.to.mdJSON <- function(input_file,output_file,title) {
   
-  # options(warn=-1)
   
   # Import dictionary and blank json file
   xlsx.dictionary<-read_excel(paste0("inputs/",input_file))
@@ -17,7 +16,8 @@ xlsx.to.mdJSON <- function(input_file,output_file,title) {
   xlsx.dictionary = xlsx.dictionary %>%
     mutate_at(vars(allowNull, isCaseSensitive, domainId), ~ replace(., which(.=="yes"), "true")) %>%
     mutate_at(vars(allowNull, isCaseSensitive, domainId), ~ replace(., which(.=="no"), "false")) %>%
-    mutate_each(funs(str_replace_all(., "\"", "'")))
+    mutate_if(is.character, str_replace_all, "\"", "'")
+    
   
   ## Generate uuids
   id<- UUIDgenerate(use.time=FALSE, n=1)
@@ -249,6 +249,7 @@ xlsx.to.mdJSON <- function(input_file,output_file,title) {
 
 
 
+# NCmisc::list.functions.in.file("scripts/xlsx.to.mdJSON_function.R")
 
 
 

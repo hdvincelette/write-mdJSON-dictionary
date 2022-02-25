@@ -2,17 +2,12 @@
 
 # Package names
 packages <- c(
-  "dplyr",
-  "stringr",
+  "tidyverse",
   "rjson",
   "jsonlite",
   "RJSONIO",
-  "stringr",
-  "htmlwidgets",
-  "rebus",
   "uuid",
-  "readxl",
-  "tidyverse")
+  "readxl")
 
 # Install packages not yet installed
 installed_packages <- packages %in% rownames(installed.packages())
