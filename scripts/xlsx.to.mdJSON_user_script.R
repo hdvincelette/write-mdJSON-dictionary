@@ -18,7 +18,7 @@
 # is meant to initiate mdEditor dictionary records, not update them, which 
 # should be done manually in the mdEditor web application. It is recommended 
 # users maintain the xlsx dictionary as a human-readable reference for the 
-# associated data product(s).
+# associated data product.
 
 # Users should become familiar with mdEditor before using this script. 
 browseURL("https://go.mdeditor.org/#/dashboard")
@@ -60,7 +60,7 @@ source("scripts/xlsx.to.mdJSON_packages.R")
 
 
 # Load the function
-source("scripts/xlsx.to.mdJSON_function.R")
+source("scripts/xlsx.to.mdJSON_functions.R")
 
 
 # Run the function
