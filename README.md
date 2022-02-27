@@ -1,4 +1,4 @@
-# write-to-mdJSON-dictionary
+# write-mdJSON-dictionary
 R script that writes an mdEditor mdJSON data dictionary using a tabular template.
 
 docs: supporting materials (tabular dictionary template)
