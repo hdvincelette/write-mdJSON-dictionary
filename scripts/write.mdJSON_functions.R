@@ -2,18 +2,18 @@
 
 # Function to write mdJSON dictionary
 
-xlsx.to.mdJSON <- function(input_file,title) {
+write.mdJSON <- function(input_file,title) {
   
   
   # Import dictionary and blank json file
-  xlsx.dictionary<-read_excel(paste0("inputs/",input_file))
+  my.dictionary<-read_excel(paste0("inputs/",input_file))
   blankjson = rjson::fromJSON(file= "inputs/do_not_remove/Blank_Dictionary.json")
   
   
-  # Prepare xlsx dictionary
+  # Prepare the dictionary
   
   ## Replace strings
-  xlsx.dictionary = xlsx.dictionary %>%
+  my.dictionary = my.dictionary %>%
     mutate_at(vars(allowNull, isCaseSensitive, domainId), ~ replace(., which(.=="yes"), "true")) %>%
     mutate_at(vars(allowNull, isCaseSensitive, domainId), ~ replace(., which(.=="no"), "false")) %>%
     mutate_if(is.character, str_replace_all, "\"", "'")
@@ -34,7 +34,7 @@ xlsx.to.mdJSON <- function(input_file,title) {
   
   ## Add domain ids to original file
   ## Isolate colname rows with domain notations
-  domaincolumns<-xlsx.dictionary %>%
+  domaincolumns<-my.dictionary %>%
     filter(domainItem_value=="colname") %>%
     filter(domainId=="true") %>%
     select(codeName,domainId)
@@ -44,10 +44,10 @@ xlsx.to.mdJSON <- function(input_file,title) {
   
   ## Join domainIds with origianl data frame
   for(e in 1:nrow(domaincolumns)){
-    for (d in 1:nrow(xlsx.dictionary)){
-      if(domaincolumns$codeName[e]==xlsx.dictionary$codeName[d] &
-         xlsx.dictionary$domainItem_value[d]=="colname"){
-        xlsx.dictionary$domainId[d]=domaincolumns$domainId[e]
+    for (d in 1:nrow(my.dictionary)){
+      if(domaincolumns$codeName[e]==my.dictionary$codeName[d] &
+         my.dictionary$domainItem_value[d]=="colname"){
+        my.dictionary$domainId[d]=domaincolumns$domainId[e]
       }
     }}
   
@@ -64,7 +64,7 @@ xlsx.to.mdJSON <- function(input_file,title) {
   ## ]}]
   
   ## Create entity data frame for loop
-  EntityDictionary<-xlsx.dictionary %>%
+  EntityDictionary<-my.dictionary %>%
     filter(domainItem_value=="colname") %>%
     select(-c("notes","domainItem_name","domainItem_value"))
   
@@ -121,11 +121,11 @@ xlsx.to.mdJSON <- function(input_file,title) {
   
   
   ## Create domain data frames for loop
-  DomainDictionaryColname<- xlsx.dictionary %>%
+  DomainDictionaryColname<- my.dictionary %>%
     select(c("domainId","codeName","domainItem_name","domainItem_value","definition")) %>%
     filter(domainItem_value=="colname" & !is.na(domainId))
   
-  DomainDictionaryItem <- xlsx.dictionary %>%
+  DomainDictionaryItem <- my.dictionary %>%
     select(c("codeName","domainItem_name","domainItem_value","definition")) %>%
     filter(domainItem_value!="colname")
   
@@ -249,7 +249,7 @@ xlsx.to.mdJSON <- function(input_file,title) {
 
 
 
-# NCmisc::list.functions.in.file("scripts/xlsx.to.mdJSON_function.R")
+# NCmisc::list.functions.in.file("scripts/write.mdJSON_function.R")
 
 
 

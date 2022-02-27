@@ -1,12 +1,12 @@
-# R-xlsx-to-mdJSON-dictionary
-R script that writes an mdEditor mdJSON data dictionary using an xlsx template.
+# write-to-mdJSON-dictionary
+R script that writes an mdEditor mdJSON data dictionary using a tabular template.
 
-docs: supporting materials (xlsx dictionary template)
+docs: supporting materials (tabular dictionary template)
 
-inputs: files read into R (completed xlsx dictionary, blank mdJSON)
+inputs: files read into R (completed tabular dictionary, blank mdJSON)
 
 outputs: files written by R (mdJSON dictionary)
 
 scripts: R scripts (user script, packages, function)
 
-xlsx-to-mdJSON-dictionary.Rproj: working space for using R scripts
+write-mdJSON-dictionary.Rproj: working space for using R scripts
