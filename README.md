@@ -9,4 +9,4 @@ outputs: files written by R (mdJSON dictionary)
 
 scripts: R scripts (user script, packages, function)
 
-R-xlsx-to-mdJSON-dictionary.Rproj: working space for using R scripts
+xlsx-to-mdJSON-dictionary.Rproj: working space for using R scripts

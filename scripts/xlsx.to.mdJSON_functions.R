@@ -2,7 +2,7 @@
 
 # Function to write mdJSON dictionary
 
-xlsx.to.mdJSON <- function(input_file,output_file,title) {
+xlsx.to.mdJSON <- function(input_file,title) {
   
   
   # Import dictionary and blank json file
@@ -242,7 +242,7 @@ xlsx.to.mdJSON <- function(input_file,output_file,title) {
   ## Write data frame to json
   
   newjson= rjson::toJSON(blankjson)
-  write(newjson, paste0("outputs/",output_file))
+  write(newjson, paste0("outputs/",paste0(sub('.[^.]*$', '', input_file),".json")))
   
   
 }
