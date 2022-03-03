@@ -12,7 +12,7 @@ write.mdJSON <- function(input_file,title) {
   
   # Prepare the dictionary
   
-  ## Remove double quotes and add domain column
+  ## Replace values and add domain column
   my.dictionary <- my.dictionary %>%
     mutate_if(is.character, str_replace_all, "\"", "'") %>%
     mutate_at(vars(allowNull, isCaseSensitive), ~ replace(., which(.=="yes"), "true")) %>%
