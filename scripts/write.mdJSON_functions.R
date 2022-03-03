@@ -12,12 +12,17 @@ write.mdJSON <- function(input_file,title) {
   
   # Prepare the dictionary
   
-  ## Replace strings
-  my.dictionary = my.dictionary %>%
-    mutate_at(vars(allowNull, isCaseSensitive, domainId), ~ replace(., which(.=="yes"), "true")) %>%
-    mutate_at(vars(allowNull, isCaseSensitive, domainId), ~ replace(., which(.=="no"), "false")) %>%
-    mutate_if(is.character, str_replace_all, "\"", "'")
-    
+  ## Remove double quotes and add domain column
+  my.dictionary <- my.dictionary %>%
+    mutate_if(is.character, str_replace_all, "\"", "'") %>%
+    select(-notes) %>%
+    add_column(domainId=NA)
+  
+  for(b in 1:nrow(my.dictionary)){
+    if(my.dictionary$domainItem_name[b]!="colname"){next}
+    else if(sum(my.dictionary$codeName==my.dictionary$codeName[b])>1)
+    {my.dictionary$domainId[b]="true"}}
+  
   
   ## Generate uuids
   id<- UUIDgenerate(use.time=FALSE, n=1)
@@ -66,7 +71,7 @@ write.mdJSON <- function(input_file,title) {
   ## Create entity data frame for loop
   EntityDictionary<-my.dictionary %>%
     filter(domainItem_value=="colname") %>%
-    select(-c("notes","domainItem_name","domainItem_value"))
+    select(-c("domainItem_name","domainItem_value"))
   
   ## Create empty lists for loop
   elementlist<- list()
