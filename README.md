@@ -7,7 +7,7 @@ inputs: files read into R (completed tabular dictionary, blank mdJSON)
 
 outputs: files written by R (mdJSON dictionary)
 
-scripts: R scripts (user script, packages, function)
+scripts: R scripts (user script, packages, functions)
 
 write-mdJSON-dictionary.Rproj: working space for using R scripts
 
