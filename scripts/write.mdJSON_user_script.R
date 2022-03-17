@@ -2,7 +2,7 @@
 # write-mdJSON-dictionary (Version 1)
 # R script that writes an mdEditor mdJSON data dictionary using a tabular dictionary template
 # Created by Hannah Vincelette
-# Updated 2/26/2022
+# Updated 3/17/2022
 
 
 # Set your working directory
@@ -19,7 +19,7 @@ input_file<-"Example_Dictionary.xlsx"
 
 
 # Specify the desired title of your dictionary in mdEditor
-title<- "Example"
+title<- "Example Dictionary"
 
 
 #### DO NOT EDIT: Run to create your mdJSON dictionary ####
