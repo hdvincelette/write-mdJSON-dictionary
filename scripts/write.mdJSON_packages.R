@@ -3,9 +3,7 @@
 # Package names
 packages <- c(
   "tidyverse",
-  "rjson",
   "jsonlite",
-  "RJSONIO",
   "uuid",
   "readxl")
 

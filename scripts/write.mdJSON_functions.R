@@ -255,8 +255,8 @@ write.mdJSON <- function(input_file,title) {
 }
 
 
-
-# NCmisc::list.functions.in.file("scripts/write.mdJSON_function.R")
+# rfile <- file.choose() 
+# NCmisc::list.functions.in.file(rfile)
 
 
 
